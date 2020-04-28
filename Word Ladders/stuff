@@ -1,0 +1,15 @@
+	ls = []
+	neigh = 0
+	for word in wlist:
+		nonmatches = 0
+		index = 0
+		for letter in word:
+			if ustr[index]!= letter:
+				nonmatches+= 1
+			if nonmatches>1:
+				break
+			index+= 1
+		if nonmatches==1:
+			ls[len(ls):] = [word]
+			neigh+=1
+	return ls
